@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black; 
+    color: white; 
+    background-image: url('fundo-preto.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 2100px;
+    margin: 0 auto;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: black;
+}
+
+.left-column {
+    font-size: 2rm;
+    margin: 0 0 20px;
+}
+
+.large-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.right-column {
+    .right-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 10px; 
+        grid-template-areas:
+            "img1 img1"
+            "img3 img2"
+            "img5 img3"
+            "img5 img4"
+            "img5 img5"
+            "img5 img6"
+            "img5 img7"
+
+    }
+    }
+    
+    .grid-item:nth-child(1) {
+        grid-area: img1;
+    }
+    
+    .grid-item:nth-child(2) {
+        grid-area: img2;
+    }
+    
+    .grid-item:nth-child(3) {
+        grid-area: img3;
+    }
+    
+    .grid-item:nth-child(4) {
+        grid-area: img4;
+    }
+    
+    .grid-item:nth-child(5) {
+        grid-area: img5;
+    }
+    
+    .grid-item:nth-child(6) {
+        grid-area: img6;
+    }
+    
+
+.row {
+    display: contents;
+}
+
+.row.full-width {
+    grid-template-columns: 1fr 1fr;
+}
+
+.small-img, .full-width-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column, .right-column {
+        padding: 10px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
